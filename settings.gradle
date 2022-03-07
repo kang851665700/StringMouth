@@ -1,0 +1,41 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven {
+            url 'https://jitpack.io'
+        }
+        maven {
+            credentials {
+                username "admin"
+                password "zhipu@123"
+            }
+            allowInsecureProtocol = true
+            url 'http://cloud.cpnir.com:8081/nexus/repository/maven-public/'
+        }
+    }
+
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url 'https://jitpack.io'
+        }
+        maven {
+            credentials {
+                username "admin"
+                password "zhipu@123"
+            }
+            allowInsecureProtocol = true
+            url 'http://cloud.cpnir.com:8081/nexus/repository/maven-public/'
+        }
+    }
+}
+rootProject.name = "StringMouth"
+include ':app'
+include ':StringMouth'
